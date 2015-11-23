@@ -10,10 +10,13 @@ Ingredients
 
 What Success Looks Like
 =======================
-![Alt text](/path/to/img.jpg)
+
+![Docker client](/clientconfigured.png)
+![Running cmd.exe](/cmdexe.png)
 
 Approach
 ========
+![Architecture](/arch.png)
 
 Steps
 =====
@@ -34,9 +37,9 @@ Steps
 1. Install the Docker container feature using the [instructions and script](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/container_setup).
 5. Check the inner VM (Hyper-V guest) has started and is running
 
-![Alt text](/path/to/img.jpg)
+![Hyper-V](/hyperv.png)
 
-1. Enable the inner VM for Remote powershell: https://technet.microsoft.com/en-us/magazine/ff700227.aspx
+1. Enable the inner VM for [Remote powershell](https://technet.microsoft.com/en-us/magazine/ff700227.aspx):
 
     winrm s winrm/config/client '@{TrustedHosts="192.168.177.129"}'
 
@@ -71,3 +74,5 @@ Shortcomings
 1. Nesting hypervisors from different vendors is definitely #unsupported
 1. Insecure - TLS not enabled on host (but limited to host only network)
 1. Need to explicitly open firewall ports using PowerShell
+
+PRs and feedback welcome!
